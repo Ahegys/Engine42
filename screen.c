@@ -9,7 +9,7 @@ void	screen(int h, int w, char *title)
 	ptr->mlx = mlx_init();
 
 	ptr->win = mlx_new_window(ptr->mlx, h, w, title);
-	circle(&win, h / 2, w / 2, 25);
+	circle(&win, h / 2, w / 2, 180);
 	mlx_loop(ptr->mlx);
 }
 
