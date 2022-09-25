@@ -25,16 +25,14 @@ void	rect(Get *instance, int x, int y, int h, int w, int color)
 
 }
 
-void	circle(Get *instance, int x, int y, int radius)
+void	circle(Get *instance, int x, int y, int radius, int color)
 {
 	double pi;
 	double x1;
 	double angle;
 	double y1;
 	double i;
-	int color;
 
-	color = 255;
 	pi = 3.14159265359;
 	i = 0;
 	while (i < 360)
