@@ -1,5 +1,5 @@
 #include "engine.h"
-#include <math.h>
+
 void	rect(Get *instance, int x, int y, int h, int w, int color)
 {
 	int i_h;
