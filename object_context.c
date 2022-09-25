@@ -1,5 +1,38 @@
 #include "engine.h"
+void	rectTd(Get *instance, int x, int y, int h, int w, int color)
+{
+	int i_h;
+	int i_w;
 
+	i_h = 0;
+	i_w = 0;
+
+	while (i_h <= h)
+	{
+		// move horizontal lines
+		mlx_pixel_put(instance->mlx,instance->win, x - i_h, y, color);
+		mlx_pixel_put(instance->mlx,instance->win, x - i_h + h, y - h - i_h, color);
+		mlx_pixel_put(instance->mlx,instance->win, x - i_h, y + h - i_h - h, color);
+		mlx_pixel_put(instance->mlx,instance->win, x - i_h + h, y - h, color);
+		mlx_pixel_put(instance->mlx,instance->win, x - i_h + h, y - h * 2, color);
+		mlx_pixel_put(instance->mlx,instance->win, x - i_h, y - h, color);
+		mlx_pixel_put(instance->mlx,instance->win, x + i_h , y - i_h - h, color);
+		i_h++;
+	}
+	while (i_w <= w)
+	{
+		// move vertical lines
+		mlx_pixel_put(instance->mlx,instance->win, x - w, y - i_w, color);
+		mlx_pixel_put(instance->mlx,instance->win, x - w + i_w, y - i_w, color);
+		mlx_pixel_put(instance->mlx,instance->win, x + i_w, y - i_w, color);
+		mlx_pixel_put(instance->mlx,instance->win, x + i_w - w, y - i_w - h, color);
+		mlx_pixel_put(instance->mlx,instance->win, x, y - i_w, color);
+		mlx_pixel_put(instance->mlx,instance->win, x, y - i_w - h, color);
+		mlx_pixel_put(instance->mlx,instance->win, x + h, y - i_w - h, color);
+		i_w++;
+	}
+
+}
 void	rect(Get *instance, int x, int y, int h, int w, int color)
 {
 	int i_h;
@@ -12,7 +45,7 @@ void	rect(Get *instance, int x, int y, int h, int w, int color)
 	{
 		// move horizontal lines
 		mlx_pixel_put(instance->mlx,instance->win, x - i_h, y, color);
-		mlx_pixel_put(instance->mlx,instance->win, x - i_h, y - h, color);
+		mlx_pixel_put(instance->mlx,instance->win, x- i_h, y - h, color);
 		i_h++;
 	}
 	while (i_w <= w)
@@ -37,7 +70,7 @@ void	circle(Get *instance, int x, int y, int radius, int color)
 	i = 0;
 	while (i < 360)
 	{
-		i += 0.1;
+		i += 0.01;
 		angle = i;
 		x1 = radius * cos((float)angle * pi / 180);
 		y1 = radius * sin((float)angle * pi / 180);
