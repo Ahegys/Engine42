@@ -6,10 +6,10 @@
 #### Debian-based distros
 ```sudo apt-get install libxext-dev libxrandr-dev libx11-dev libbsd-dev libssl-dev```
 ```
-git clone https://github.com/42Paris/minilibx
-
+git clone https://github.com/42Paris/minilibx-linux minilibx
+cd minilibx
 make
-mv minilibx/man/man1 /usr/local/man/
-mv minilibx/libmlx.a  /usr/local/lib/
-mv minilibx/mlx.h /usr/local/include/
+sudo mv minilibx/man/man1 /usr/local/man/
+sudo mv minilibx/libmlx.a  /usr/local/lib/
+sudo mv minilibx/mlx.h /usr/local/include/
 ```
