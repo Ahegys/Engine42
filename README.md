@@ -5,6 +5,8 @@
 ```sudo pacman -Syyu libxext libxrandr libx11 libbsd libssl```
 #### Debian-based distros
 ```sudo apt-get install libxext-dev libxrandr-dev libx11-dev libbsd-dev libssl-dev```
+
+> Script for install for use lib
 ```
 git clone https://github.com/42Paris/minilibx-linux minilibx
 cd minilibx
