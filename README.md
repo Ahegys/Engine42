@@ -9,7 +9,9 @@
 git clone https://github.com/42Paris/minilibx-linux minilibx
 cd minilibx
 make
-sudo mv minilibx/man/man1 /usr/local/man/
-sudo mv minilibx/libmlx.a  /usr/local/lib/
-sudo mv minilibx/mlx.h /usr/local/include/
+sudo mv man/man1 /usr/local/man/
+sudo mv libmlx.a  /usr/local/lib/
+sudo mv mlx.h /usr/local/include/
+cd ..
+rm -rf minilibx
 ```
